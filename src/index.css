@@ -1,0 +1,88 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(0, 0, 0); /* Cool gradient background with deep blues and greys */
+    margin: 0;
+    padding: 0;
+    color: #F0F0F0; /* Softer light text color for better contrast */
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    border-radius: 15px;
+    color: #E0E0E0;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 3px solid #5D6D7E; /* Soft grey-blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    animation: gradientAnimation 15s ease infinite; /* Apply the animation with smooth transition */
+    background: linear-gradient(135deg, #0340a9, #203e72); /* Initial gradient */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #0340a9, #203e72);
+    }
+    25% {
+        background: linear-gradient(135deg, #003a70, #005b9a);
+    }
+    50% {
+        background: linear-gradient(135deg, #005b9a, #0072b1);
+    }
+    75% {
+        background: linear-gradient(135deg, #0072b1, #0340a9);
+    }
+    100% {
+        background: linear-gradient(135deg, #0340a9, #203e72);
+    }
+}
+
+.animated-header {
+    animation: colorChange 5s infinite;
+}
+
+/* Keyframes for color animation */
+@keyframes colorChange {
+    0% { color: #ffffff; }
+    25% { color: #ff7e5f; }
+    50% { color: #feb47b; }
+    75% { color: #4CA1AF; }
+    100% { color: #ffffff; }
+}
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: linear-gradient(-135deg, #00192b, #005382, #003144); /* Deep, professional gradient */
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow for prominence */
+    text-align: center;
+    color: #E0E0E0;
+    border: 3px solid #006699; /* Matching cool-toned border */
+}
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background: linear-gradient(135deg, #2C3E50, #34495E); 
+    color: #E0E0E0;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    border: 3px solid #4A5D6E; 
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Calculator Container */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+    background: linear-gradient(135deg, #00fefee9, #f5cb76); /* Elegant gradient for the calculator area */
+    border: 3px solid #6A89CC; /* Soft grey-blue border for sophistication */
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a floating effect */
+}

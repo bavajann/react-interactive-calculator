@@ -1,0 +1,174 @@
+/* Calculator Container */
+.calculator {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transition: background 0.3s, box-shadow 0.3s; 
+}
+
+
+.calculator.dark {
+    background: linear-gradient(145deg, #2e2e2e, #3b3b3b);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+
+.display {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+/* Input Field */
+.display input {
+    font-size: 2em;
+    padding: 15px;
+    text-align: right;
+    border: 2px solid #cccccc; 
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: inset 4px 4px 10px #ccc, inset -4px -4px 10px #ffffff;
+    margin-bottom: 15px;
+    color: #333; 
+    transition: background 0.3s, color 0.3s; 
+}
+
+/* Dark Mode Input Field */
+.calculator.dark .display input {
+    background-color: #3b3b3b;
+    box-shadow: inset 4px 4px 10px #1f1f1f, inset -4px -4px 10px #4b4b4b;
+    color: #f5f5f5;
+    border: 2px solid #4b4b4b; /* Dark mode border */
+}
+
+/* Result Display */
+.display .result {
+    font-size: 1.5em;
+    text-align: right;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    border: 2px solid #cccccc; 
+    box-shadow: inset 4px 4px 10px #ccc, inset -4px -4px 10px #ffffff;
+    color: #333; 
+    transition: background 0.3s, color 0.3s; 
+}
+
+/* Dark Mode Result Display */
+.calculator.dark .display .result {
+    background-color: #3b3b3b;
+    box-shadow: inset 4px 4px 10px #1f1f1f, inset -4px -4px 10px #4b4b4b;
+    color: #f5f5f5;
+    border: 2px solid #4b4b4b; /* Dark mode border */
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px; 
+}
+
+/* Button Styles */
+.buttons button {
+    padding: 15px;
+    font-size: 1.5em;
+    border: 2px solid #d0d0d0; 
+    border-radius: 10px;
+    background: linear-gradient(145deg, #e0e0e0, #ffffff);
+    box-shadow: 5px 5px 15px #d4d4d4, -5px -5px 15px #ffffff;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    color: #333; 
+    width: 100%; 
+    height: 60px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark Mode Button Styles */
+.calculator.dark .buttons button {
+    background: linear-gradient(145deg, #3a3a3a, #4b4b4b);
+    border: 2px solid #3a3a3a; 
+    box-shadow: 5px 5px 15px #292929, -5px -5px 15px #5a5a5a;
+    color: #f5f5f5;
+}
+
+/* Button Hover Effect */
+.buttons button:hover {
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    box-shadow: 5px 5px 15px #c4c4c4, -5px -5px 15px #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Dark Mode Button Hover Effect */
+.calculator.dark .buttons button:hover {
+    background: linear-gradient(145deg, #4b4b4b, #3a3a3a);
+    box-shadow: 5px 5px 15px #1f1f1f, -5px -5px 15px #5a5a5a;
+}
+
+/* Button Active Effect */
+.buttons button:active {
+    box-shadow: inset 5px 5px 15px #c4c4c4, inset -5px -5px 15px #ffffff;
+    transform: translateY(2px);
+}
+
+/* Dark Mode Button Active Effect */
+.calculator.dark .buttons button:active {
+    box-shadow: inset 5px 5px 15px #1f1f1f, inset -5px -5px 15px #5a5a5a;
+}
+
+/* Clear and Equals Button Styles */
+.buttons button:nth-child(16), 
+.buttons button:nth-child(13) { 
+    background: linear-gradient(145deg, #ff7878, #ff5454);
+    color: white;
+    border: 2px solid #ff5454; 
+    box-shadow: 5px 5px 15px #e06565, -5px -5px 15px #ff9b9b;
+}
+
+/* Dark Mode Clear and Equals Button Styles */
+.calculator.dark .buttons button:nth-child(16), 
+.calculator.dark .buttons button:nth-child(13) { 
+    background: linear-gradient(145deg, #ff3b3b, #ff1a1a);
+    border: 2px solid #ff1a1a; 
+}
+
+
+.buttons button:nth-child(16):hover,
+.buttons button:nth-child(13):hover {
+    background: linear-gradient(145deg, #ff5454, #ff7878);
+}
+
+
+.calculator.dark .buttons button:nth-child(16):hover,
+.calculator.dark .buttons button:nth-child(13):hover {
+    background: linear-gradient(145deg, #ff1a1a, #ff3b3b);
+}
+
+
+.dark-mode-toggle {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: 2px solid #cccccc; 
+    box-shadow: 2px 2px 10px #b0b0b0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.calculator.dark .dark-mode-toggle {
+    background-color: #4b4b4b;
+    color: #f5f5f5;
+    border: 2px solid #3b3b3b; 
+    box-shadow: 2px 2px 10px #1f1f1f;
+}
